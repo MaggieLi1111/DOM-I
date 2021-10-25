@@ -45,7 +45,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const links = document.querySelectorAll("nav a");
 links.forEach((item, index) => {
   item.textContent = Object.values(siteContent["nav"])[index];
+  item.style.color = "green";
 })
+
+
+const history = document.createElement("a");
+history.href = "#";
+history.textContent = "History";
+
+const stuff = document.createElement("a");
+stuff.href ="#";
+stuff.textContent = "Stuff";
+
+links[0].prepend(history);
+links[links.length-1].appendChild(stuff);
+
+
 
 
 const h1 = document.querySelector("h1");
